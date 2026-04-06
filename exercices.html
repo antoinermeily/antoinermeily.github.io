@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Exercices</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Exercices</h1>
+</header>
+<nav>
+<ul>
+<li><a href="index.html">Accueil</a></li>
+</ul>
+</nav>
+<div class="when-section">
+<h2>Pythagore</h2>
+AB<input value='' id='AB'/> 
+AC<input value='' id='AC'/> 
+BC<input value='' id='BC'/>
+<input type='button' value='Verifier si le triangle est rectangle' onclick='pythagore()'/>
+<p id='reponse1'></p>
+
+<h2>Hypothénuse</h2>
+<p>Entrer deux côtés :</p>
+AB<input value='' id='AB1'/> 
+AC<input value='' id='AC1'/>
+<input type='button' value="Donner la longueur de l'hypothénuse" onclick='hypothenuse()'/>
+<p id='reponse2'></p>
+
+<h2>Compter les "e"</h2>
+<input type="text" id="mot" placeholder="Entrer un mot">
+<button onclick="compterE()">Compter</button>
+<p id="reponse3"></p>
+<script src="exercices.js"></script>
+
+<h2>Jeu du + ou -</h2>
+<p>Devine le nombre entre 1 et 100</p>
+<input value=''  id="essai"/>
+<button onclick="jeu()">Tester</button>
+<p id="reponse4"></p>
+
+<h2>QCM - Liban</h2>
+
+<p>1. Capitale du Liban ?</p>
+<button onclick="choose(1,'Beyrouth',this)">Beyrouth</button>
+<button onclick="choose(1,'Paris',this)">Paris</button>
+<button onclick="choose(1,'Rome',this)">Rome</button>
+
+<p>2. Le Liban est en :</p>
+<button onclick="choose(2,'Asie',this)">Asie</button>
+<button onclick="choose(2,'Europe',this)">Europe</button>
+<button onclick="choose(2,'Afrique',this)">Afrique</button>
+
+<p>3. Le Liban est bordé par :</p>
+<button onclick="choose(3,'Mer Méditerranée',this)">Mer Méditerranée</button>
+<button onclick="choose(3,'Océan Atlantique',this)">Océan Atlantique</button>
+<button onclick="choose(3,'Mer Rouge',this)">Mer Rouge</button>
+
+<p>4. Une ville du Liban :</p>
+<button onclick="choose(4,'Byblos',this)">Byblos</button>
+<button onclick="choose(4,'Tokyo',this)">Tokyo</button>
+<button onclick="choose(4,'Madrid',this)">Madrid</button>
+
+<br><br>
+<button onclick="verifier()">Vérifier</button>
+
+<p id="result"></p>
