@@ -54,7 +54,7 @@ var tentative = 0
 function jeu()
 {
 let essai = parseInt(document.getElementById("essai").value);
-if(essai === secret){
+if(essai== secret){
 document.getElementById("reponse4").innerHTML = "Bravo ! Trouvé en " + tentative +" tentatives.";
 tentative= tentative +1
 }
@@ -73,19 +73,24 @@ var reponses = ["","","",""];
 function choose(question, value, btn)
 {
     reponses[question-1] = value;
-    btn.style.fontWeight = "bold";
+
+    if (btn.style.fontWeight === "bold") {
+        btn.style.fontWeight = "normal";
+    } else {
+        btn.style.fontWeight = "bold";
+    }
 }
 
 function verifier()
 {
     var score = 0;
 
-    if(reponses[0] === "Beyrouth") score++;
-    if(reponses[1] === "Asie") score++;
-    if(reponses[2] === "Mer Méditerranée") score++;
-    if(reponses[3] === "Byblos") score++;
+    if(reponses[0] === "Beyrouth") score=score+1;
+    if(reponses[1] === "Asie") score=score+1;
+    if(reponses[2] === "Mer Méditerranée") score=score+1;
+    if(reponses[3] === "Byblos") score=score+1;
 
-    document.getElementById("result").innerHTML = "Score : " + score + "/4";
+    document.getElementById("result").innerHTML = "Score: " + score + "/4";
     let buttons = document.getElementsByTagName("button");
 
     for(let i = 0; i < buttons.length; i=i+1){
